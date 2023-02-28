@@ -6,7 +6,7 @@
  * interchangeable.
  */
 
-namespace RefactoringGuru\Strategy\RealWorld;
+namespace RefactoringGuru\Behavioral\Strategy\RealWorld;
 
 use AllowDynamicProperties;
 

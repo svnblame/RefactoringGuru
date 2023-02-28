@@ -1,0 +1,20 @@
+{
+    "name": "gene/refactoring-guru",
+    "description": "PHP Code Examples from RefactoringGuru for use as reference.",
+    "type": "project",
+    "require": {
+        "composer/composer": "^2.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gene Kelley",
+            "email": "phpcodehead@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "RefactoringGuru\\": "/"
+        }
+    }
+}

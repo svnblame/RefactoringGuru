@@ -12,7 +12,7 @@
  * command between script launches.
  */
 
- namespace RefactoringGuru\Command\RealWorld;
+ namespace RefactoringGuru\Behavioral\Command\RealWorld;
 
 /**
 * The Command interface declares the main execution method as well as several
@@ -177,7 +177,7 @@ class IMDBMovieScrapingCommand extends WebScrapingCommand
 }
 
 /**
- * The Queue class acts as an Innvoker. It stacks the command objects and
+ * The Queue class acts as an Invoker. It stacks the command objects and
  * executes them one by one. If the script execution is suddenly terminated, the
  * queue and all its commands can easily be restored, and you won't need to
  * repeat all of the executed commands.
@@ -221,8 +221,8 @@ class Queue
     public function getCommand(): Command
     {
         $query = 'SELECT * FROM "commands" WHERE "status" = 0 LIMIT 1';
-        $record = $this->db->querySingle($query, true);
-        $command = unserialize(base64_decode($record["command"]));
+        $record = $this->db->querySingle($query, true); 
+        $command = unserialize(base64_decode($record["command"])); 
         $command->id = $record['id'];
 
         return $command;

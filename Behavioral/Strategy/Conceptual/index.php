@@ -1,6 +1,6 @@
 <?php 
 
-namespace RefactoringGuru\Strategy\Conceptual;
+namespace RefactoringGuru\Behavioral\Strategy\Conceptual;
 
 /**
 * The Context defines the interface of interest to clients.
