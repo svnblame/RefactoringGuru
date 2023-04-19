@@ -46,7 +46,7 @@ class ConcreteFactory2 implements AbstractFactory
         return new ConcreteProductA2();
     }
 
-    public function createProductB: AbstractProductB 
+    public function createProductB(): AbstractProductB 
     {
         return new ConcreteProductB2();
     }
@@ -156,7 +156,7 @@ function clientCode(AbstractFactory $factory)
     $productB = $factory->createProductB();
 
     echo $productB->usefulFunctionB() . PHP_EOL;
-    echo $productb->anotherUsefulFunctionB() . PHP_EOL;
+    echo $productB->anotherUsefulFunctionB($productA) . PHP_EOL;
 }
 
 /**
