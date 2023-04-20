@@ -1,6 +1,6 @@
 <?php 
 
-namespace RefactoringGuru\Command\Conceptual;
+namespace RefactoringGuru\Behavioral\Command\Conceptual;
 
 /**
  * Command is a behavioral design pattern that convertes requests or simple
