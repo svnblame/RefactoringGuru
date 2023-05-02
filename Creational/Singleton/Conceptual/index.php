@@ -18,8 +18,8 @@ class Singleton
     private static $instances = [];
 
     /**
-     * The Singleton's constructor should always be private or protected to prevent
-     * direct construction calls with the `new` operator.
+     * Singleton's constructor should not be public. However, it can't be
+     * private either if we want to allow subclassing.
      */
     protected function __construct() { }
 
