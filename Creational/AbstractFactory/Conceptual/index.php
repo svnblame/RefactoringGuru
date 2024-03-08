@@ -10,7 +10,7 @@ namespace RefactoringGuru\Creational\AbstractFactory\Conceptual;
  * variants, but the products of one variant are incompatible with products of
  * another.
  */
-interface AbstractFactory 
+interface AbstractFactory
 {
     public function createProductA(): AbstractProductA;
 
@@ -23,14 +23,14 @@ interface AbstractFactory
  * that signatures of the Concrete Factory's methods return an abstract product,
  * while inside the method a concrete product is instantiated.
  */
-class ConcreteFactory1 implements AbstractFactory 
+class ConcreteFactory1 implements AbstractFactory
 {
-    public function createProductA(): AbstractProductA 
+    public function createProductA(): AbstractProductA
     {
         return new ConcreteProductA1();
     }
 
-    public function createProductB(): AbstractProductB 
+    public function createProductB(): AbstractProductB
     {
         return new ConcreteproductB1();
     }
@@ -39,14 +39,14 @@ class ConcreteFactory1 implements AbstractFactory
 /**
  * Each Concrete Factory has a corresponding product variant.
  */
-class ConcreteFactory2 implements AbstractFactory 
+class ConcreteFactory2 implements AbstractFactory
 {
-    public function createProductA(): AbstractProductA 
+    public function createProductA(): AbstractProductA
     {
         return new ConcreteProductA2();
     }
 
-    public function createProductB(): AbstractProductB 
+    public function createProductB(): AbstractProductB
     {
         return new ConcreteProductB2();
     }
@@ -94,7 +94,7 @@ interface AbstractProductB
 
     /**
      * ...but it also can collaborate with the ProductA.
-     * 
+     *
      * The Abstract Factory makes sure that all products it creates of the
      * same variant and thus, compatible.
      */
@@ -105,9 +105,9 @@ interface AbstractProductB
 /**
  * Concrete Products are created by corresponding Concrete Factories.
  */
-class ConcreteProductB1 implements AbstractProductB 
+class ConcreteProductB1 implements AbstractProductB
 {
-    public function usefulFunctionB(): string 
+    public function usefulFunctionB(): string
     {
         return 'The result of the product B1.' . PHP_EOL;
     }
@@ -117,7 +117,7 @@ class ConcreteProductB1 implements AbstractProductB
      * Product A1. Nevertheless, it accepts any instance of AbstractproductA as
      * an argument.
      */
-    public function anotherUsefulFunctionB(AbstractProductA $collaborator): string 
+    public function anotherUsefulFunctionB(AbstractProductA $collaborator): string
     {
         $result = $collaborator->usefulFunctionA();
 
@@ -127,7 +127,7 @@ class ConcreteProductB1 implements AbstractProductB
 
 class ConcreteProductB2 implements AbstractProductB
 {
-    public function usefulFunctionB(): string 
+    public function usefulFunctionB(): string
     {
         return 'The result of the product B2.' . PHP_EOL;
     }
@@ -137,7 +137,7 @@ class ConcreteProductB2 implements AbstractProductB
      * Product A2. Nevertheless, it accepts any instance of AbstractProductA as
      * an argument.
      */
-    public function anotherUsefulFunctionB(AbstractProductA $collaborator): string 
+    public function anotherUsefulFunctionB(AbstractProductA $collaborator): string
     {
         $result = $collaborator->usefulFunctionA();
 
